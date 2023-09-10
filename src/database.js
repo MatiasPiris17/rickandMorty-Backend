@@ -3,19 +3,23 @@ const fs = require("fs");
 const path = require("path");
 
 // Local
+// const sequelize = new Sequelize(
+//   `postgres://postgres:42875917k@localhost:5432/rickandmorty`,
+//   {
+//     logging: false,
+//     native: false,
+//   }
+// );
+
+//  Deploy
 const sequelize = new Sequelize(
-  `postgres://postgres:42875917k@localhost:5432/rickandmorty`,
+  `postgres://rickandmorydb_user:UwLtcqfORV3vrExUHVMDD5Dc1CspipPK@dpg-cjv2moh5mpss738tcvlg-a/rickandmorydb`,
   {
     logging: false,
     native: false,
   }
 );
 
-//  Deploy
-// const sequelize = new Sequelize(DB_DEPLOY, {
-//   logging: false,
-//   native: false,
-// });
 
 const basename = path.basename(__filename);
 

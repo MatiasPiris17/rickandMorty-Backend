@@ -42,9 +42,10 @@ let capsEntries = entries.map((entry) => [
 sequelize.models = Object.fromEntries(capsEntries);
 
 // Modelos
-const {} = sequelize.models;
+const {Personajes, Favoritos} = sequelize.models;
 
 // Relacion de tablas
+
 
 // module.exports = { ...sequelize.models, conn: sequelize };
 module.exports = { sequelize, ...sequelize.models };

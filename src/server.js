@@ -32,11 +32,14 @@ server.use((err, req, res, next) => {
   console.error(err);
   res.status(500).json("Internal Server Error");
 });
+const { saveApiData } = require('./controllers/apiSave.js')
+
 
 sequelize
   .sync({ force: true })
-  .then(() => {
+  .then(async() => {
     console.log("Synchronized tables");
+    await saveApiData();
     server.listen(port, () => {
       console.log(`Listening on port ${port}`);
     });
